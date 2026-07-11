@@ -1,0 +1,51 @@
+.custom-marker {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border: 3px solid white;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+  transition: .25s;
+}
+
+.custom-marker:hover {
+  transform: scale(1.15);
+}
+
+.custom-marker {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border: 3px solid white;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+  transition: .25s;
+}
+
+.user-marker {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    box-shadow: 0 0 0 0 rgba(37,99,235,.55);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(37,99,235,0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37,99,235,0);
+  }
+
+}

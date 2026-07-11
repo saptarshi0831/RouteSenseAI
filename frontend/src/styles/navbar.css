@@ -1,0 +1,162 @@
+.navbar {
+  height: 78px;
+  background: #fff;
+  border-bottom: 1px solid #e8eef6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.navbar-search {
+  width: 420px;
+  height: 48px;
+  background: #f7f9fc;
+  border: 1px solid #e8eef6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  transition: 0.25s;
+}
+
+.navbar-search:focus-within {
+  border-color: #5b7fff;
+  box-shadow: 0 0 0 4px rgba(91, 127, 255, 0.08);
+}
+
+.search-icon {
+  color: #94a3b8;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-left: 12px;
+  font-size: 15px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e9f9ef;
+  color: #16a34a;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.notification-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 16px;
+  background: #f7f9fc;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-button:hover {
+  background: #eef5ff;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-button {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #5b7fff, #6e56cf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.profile-info h4 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.profile-info span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.25s;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 62px;
+  width: 240px;
+  background: white;
+  border: 1px solid #e8eef6;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #334155;
+}
+
+.profile-dropdown button:hover {
+  background: #f8fafc;
+}
+
+.profile-dropdown hr {
+  border: none;
+  border-top: 1px solid #edf2f7;
+  margin: 8px 0;
+}
+
+.logout-menu {
+  color: #ef4444 !important;
+}

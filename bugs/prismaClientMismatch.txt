@@ -1,0 +1,7 @@
+“I faced an issue where my Node.js backend was crashing during startup due to Prisma Client not initializing properly. The error indicated that @prisma/client was not generated correctly or the runtime .prisma folder was corrupted.
+
+I investigated the dependency chain and found that importing routes triggered Prisma initialization, which exposed a broken generated client state.
+
+To fix it, I removed the corrupted Prisma cache, reinstalled dependencies, and regenerated the Prisma client using npx prisma generate. After that, the server started successfully without errors.
+
+The key learning was that Prisma relies heavily on generated runtime files, and any mismatch between schema, generated output, and installed version can break the entire backend startup process.”

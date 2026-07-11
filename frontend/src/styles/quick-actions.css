@@ -1,0 +1,44 @@
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.action-card {
+  background: white;
+  border: 1px solid #E8EEF6;
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.action-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-card h3 {
+  margin: 0;
+  color: #1E293B;
+  font-size: 17px;
+}
+
+.action-card span {
+  color: #94A3B8;
+  font-size: 14px;
+}

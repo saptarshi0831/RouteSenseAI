@@ -1,0 +1,662 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===========================
+   Page Background
+=========================== */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    #dff3ff 0%,
+    #eef7ff 35%,
+    #f6f2ff 100%
+  );
+}
+
+/* ===========================
+   Floating Background Blobs
+=========================== */
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  animation: float 10s ease-in-out infinite;
+}
+
+.blob-one {
+  width: 260px;
+  height: 260px;
+  background: #7dd3fc;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-two {
+  width: 340px;
+  height: 340px;
+  background: #a78bfa;
+  bottom: -140px;
+  right: -100px;
+  animation-delay: 2s;
+}
+
+.blob-three {
+  width: 220px;
+  height: 220px;
+  background: #67e8f9;
+  top: 35%;
+  left: 45%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* ===========================
+   Glass Container
+=========================== */
+
+.auth-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1180px;
+  height: min(90vh, 700px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 25px 80px rgba(89, 102, 255, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+/* ===========================
+   Left Side
+=========================== */
+
+.auth-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.brand-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.brand h1 {
+  margin-top: 18px;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #1e293b;
+}
+
+.brand p {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  margin-left: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* ===========================
+   Feature Cards
+=========================== */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateX(8px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.feature-card span {
+  font-size: 24px;
+}
+
+.feature-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ===========================
+   Right Side
+=========================== */
+
+.auth-right{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1100px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .auth-left {
+    display: none;
+  }
+
+  .auth-right {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 16px;
+  }
+
+  .auth-right {
+    padding: 24px;
+  }
+
+  .auth-container {
+    border-radius: 24px;
+  }
+}
+/* ===================================================
+   AUTH CARD (IMPROVED FOR 100vh LAYOUT)
+=================================================== */
+
+/* ===========================================
+   AUTH CARD (FINAL OPTIMIZED)
+=========================================== */
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: 24px;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 18px 45px rgba(99, 102, 241, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.25s ease;
+
+  height: auto;
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ========================= */
+
+.auth-card-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ========================= */
+
+.card-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 14px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #4facfe,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: white;
+
+  font-size: 24px;
+
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.22);
+}
+
+/* ========================= */
+
+.auth-card-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+/* ========================= */
+
+.auth-card-header p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ========================= */
+
+.auth-card-body {
+  width: 100%;
+}
+
+/* ========================= */
+
+.auth-card-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+/* ========================= */
+
+.auth-card-header p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ========================= */
+
+.auth-card-body {
+  width: 100%;
+}
+
+
+/* ===================================================
+   INPUT (OPTIMIZED FOR AUTH UI)
+=================================================== */
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+/* ========================= */
+
+.input-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input-label span {
+  color: #ef4444;
+}
+
+/* ========================= */
+
+.input-wrapper {
+  position: relative;
+}
+
+/* ========================= */
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* ========================= */
+
+.glass-input {
+  width: 100%;
+  height: 48px;
+  padding-left: 42px;
+  padding-right: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(15px);
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  transition: 0.25s ease;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* ========================= */
+
+.glass-input::placeholder {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ========================= */
+
+.glass-input:focus {
+  background: white;
+  border-color: #60a5fa;
+  box-shadow:
+    0 0 0 4px rgba(96, 165, 250, 0.15),
+    0 10px 20px rgba(96, 165, 250, 0.1);
+}
+
+/* ========================= */
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #64748b;
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+.password-toggle:hover {
+  color: #3b82f6;
+}
+
+/* ========================= */
+
+.input-error .glass-input {
+  border-color: #ef4444;
+}
+
+.input-error .glass-input:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
+}
+
+/* ========================= */
+
+.input-error-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #ef4444;
+}
+
+/* ===================================================
+   BUTTON (OPTIMIZED FOR AUTH UI)
+=================================================== */
+
+.primary-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #38bdf8 0%,
+    #60a5fa 45%,
+    #6366f1 100%
+  );
+  box-shadow: 0 14px 28px rgba(59, 130, 246, 0.22);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================= */
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.7s;
+}
+
+/* ========================= */
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.28);
+}
+
+/* shine effect */
+.primary-btn:hover::before {
+  left: 140%;
+}
+
+/* ========================= */
+
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+/* ========================= */
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========================= */
+
+.btn-loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===================================================
+   LOGIN PAGE (OPTIMIZED)
+=================================================== */
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* ========================= */
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #475569;
+}
+
+.remember-me input {
+  width: 15px;
+  height: 15px;
+  accent-color: #4f8cff;
+}
+
+/* ========================= */
+
+.forgot-link {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3b82f6;
+  transition: 0.2s;
+}
+
+.forgot-link:hover {
+  color: #6366f1;
+}
+
+/* ========================= */
+
+.error-box {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+/* ========================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #dbeafe;
+}
+
+.divider span {
+  margin: 0 12px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ========================= */
+
+.bottom-text {
+  margin-top: 8px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ========================= */
+
+.bottom-link {
+  margin-left: 6px;
+  color: #3b82f6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.bottom-link:hover {
+  color: #6366f1;
+}

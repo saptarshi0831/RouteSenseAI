@@ -1,0 +1,59 @@
+.danger-warning {
+  margin-bottom: 20px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #fff5f5,
+    #fff7ed
+  );
+  border: 1px solid #fecaca;
+  animation: fadeIn 0.35s ease;
+}
+
+.danger-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+.danger-header h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.danger-body {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  color: #374151;
+}
+
+.danger-body h4 {
+  margin: 0;
+  color: #111827;
+}
+
+.danger-body p {
+  margin: 6px 0;
+  color: #6b7280;
+}
+
+.danger-body span {
+  font-size: 14px;
+  color: #374151;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

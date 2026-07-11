@@ -1,0 +1,34 @@
+.dashboard-layout {
+  min-height: 100vh;
+  background: #F5F8FF;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  background: #F5F8FF;
+}
+
+/* Scrollbar */
+
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background: #D6DFF3;
+  border-radius: 20px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,38 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #1E293B;
+  font-weight: 700;
+}
+
+.dashboard-header h1 span {
+  color: #5B7FFF;
+}
+
+.dashboard-header p {
+  margin-top: 10px;
+  color: #64748B;
+  font-size: 16px;
+}
+
+.dashboard-date {
+  text-align: right;
+}
+
+.dashboard-date span {
+  color: #94A3B8;
+  font-size: 14px;
+}
+
+.dashboard-date h3 {
+  margin-top: 8px;
+  color: #334155;
+  font-size: 20px;
+}

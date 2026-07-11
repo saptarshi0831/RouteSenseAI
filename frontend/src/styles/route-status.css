@@ -1,0 +1,40 @@
+.route-status {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.route-status div {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-status strong {
+  font-size: 15px;
+}
+
+.route-status span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.route-status.safe {
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+}
+
+.route-status.safe svg {
+  color: #16a34a;
+}
+
+.route-status.danger {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+}
+
+.route-status.danger svg {
+  color: #dc2626;
+}
