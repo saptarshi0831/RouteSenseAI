@@ -78,11 +78,6 @@ function Dashboard() {
       duration: 0,
     });
 
-  // const [
-  //   alternativeMode,
-  //   setAlternativeMode,
-  // ] = useState(false);
-
   const routeSafety =
     useRouteSafety(
       routeInfo.coordinates

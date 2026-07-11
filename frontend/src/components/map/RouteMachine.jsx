@@ -26,15 +26,12 @@ function RouteMachine({
           destination.longitude
         ),
       ],
-
       addWaypoints: false,
       draggableWaypoints: false,
       fitSelectedRoutes: true,
       routeWhileDragging: false,
       show: false,
-
       createMarker: () => null,
-
       lineOptions: {
         styles: [
           {
@@ -46,38 +43,33 @@ function RouteMachine({
       },
     }).addTo(map);
 
-    routingRef.current.on(
-      "routesfound",
-      (event) => {
-        const route = event.routes[0];
+    routingRef.current.on("routesfound", (event) => {
+      const route = event.routes[0];
 
-        const coordinates =
-          route.coordinates.map(
-            (point) => ({
-              latitude: point.lat,
-              longitude: point.lng,
-            })
-          );
+      const coordinates = route.coordinates.map((point) => ({
+        latitude: point.lat,
+        longitude: point.lng,
+      }));
 
-        onRouteFound?.({
-          coordinates,
-          distance:
-            route.summary.totalDistance,
-          duration:
-            route.summary.totalTime,
-        });
-      }
-    );
+      onRouteFound?.({
+        coordinates,
+        distance: route.summary.totalDistance,
+        duration: route.summary.totalTime,
+      });
+    });
 
     return () => {
       if (routingRef.current) {
-        map.removeControl(
-          routingRef.current
-        );
+        map.removeControl(routingRef.current);
         routingRef.current = null;
       }
     };
-  }, [map, start, destination, onRouteFound]);
+  }, [
+    map,
+    start,
+    destination,
+    onRouteFound,
+  ]);
 
   return null;
 }
