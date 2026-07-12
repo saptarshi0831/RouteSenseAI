@@ -23,6 +23,25 @@ const createEmergency = async (req, res) => {
       createdAt: emergency.createdAt,
     });
 
+    // Send notification
+   // Notify current user
+  io.to(`user:${req.user.id}`).emit("notification:new", {
+    id: emergency.id,
+    type: "sos",
+    title: "🚨 SOS Sent",
+    message: "Your emergency SOS has been sent successfully.",
+    createdAt: emergency.createdAt,
+  });
+  
+  // Notify admins
+  io.to("admins").emit("notification:new", {
+    id: emergency.id,
+    type: "sos",
+    title: "🚨 New SOS",
+    message: "A new emergency SOS has been received.",
+    createdAt: emergency.createdAt,
+  });
+
     res.status(201).json({
       success: true,
       data: emergency,

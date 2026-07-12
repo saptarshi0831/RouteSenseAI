@@ -16,18 +16,27 @@ import {
 
 import "../../styles/ai-chat.css";
 
-function AIChatCard() {
+// Initial welcome message
+const initialMessages = [
+  {
+    role: "ai",
+    text:
+      "👋 Hello! I'm RouteSense AI.\n\nI can help you with:\n\n• Nearby Hospitals\n• First Aid\n• Road Accidents\n• SOS Guidance\n• Live Location\n\nHow can I help you today?",
+  },
+];
+
+function AIChatCard({
+  routeSafety,
+  destination,
+  hospitals,
+  warning,
+}) {
   const [message, setMessage] = useState("");
 
   const [loading, setLoading] = useState(false);
 
-  const [messages, setMessages] = useState([
-    {
-      role: "ai",
-      text:
-        "👋 Hello! I'm RouteSense AI.\n\nI can help you with:\n\n• Nearby Hospitals\n• First Aid\n• Road Accidents\n• SOS Guidance\n• Live Location\n\nHow can I help you today?",
-    },
-  ]);
+  const [messages, setMessages] =
+    useState(initialMessages);
 
   const bottomRef = useRef(null);
 
@@ -79,7 +88,24 @@ function AIChatCard() {
     setLoading(true);
 
     try {
-      const response = await askAI(prompt);
+      const response = await askAI(prompt, {
+        routeStatus: routeSafety?.safe
+          ? "Safe"
+          : "Affected",
+
+        destination:
+          destination?.name ||
+          destination?.display_name ||
+          "Not Selected",
+
+        hospitalCount:
+          hospitals?.length || 0,
+
+        warning:
+          warning?.title ||
+          warning?.message ||
+          "None",
+      });
 
       setMessages((prev) => [
         ...prev,
@@ -103,6 +129,11 @@ function AIChatCard() {
     }
   };
 
+  const clearChat = () => {
+    setMessages(initialMessages);
+    setMessage("");
+  };
+
   return (
     <Card
       title="AI Emergency Assistant"
@@ -110,9 +141,18 @@ function AIChatCard() {
     >
       <div className="ai-card">
 
-        <p className="ai-heading">
-          Quick Actions
-        </p>
+        <div className="flex justify-between items-center mb-2">
+          <p className="ai-heading">
+            Quick Actions
+          </p>
+
+          <button
+            onClick={clearChat}
+            className="text-sm text-red-500 hover:text-red-700 cursor-pointer"
+          >
+            🗑 Clear Chat
+          </button>
+        </div>
 
         <div className="ai-suggestions">
           {suggestions.map((item) => {
@@ -127,7 +167,6 @@ function AIChatCard() {
                 }
               >
                 <Icon size={18} />
-
                 {item.label}
               </button>
             );
@@ -135,7 +174,6 @@ function AIChatCard() {
         </div>
 
         <div className="chat-box">
-
           {messages.map((msg, index) => (
             <div
               key={index}
@@ -151,8 +189,8 @@ function AIChatCard() {
 
               <div className="chat-bubble">
                 {msg.text
-                .replace(/\*\*/g, "")
-                .replace(/\*/g, "•")}
+                  .replace(/\*\*/g, "")
+                  .replace(/\*/g, "•")}
               </div>
             </div>
           ))}
@@ -170,11 +208,9 @@ function AIChatCard() {
           )}
 
           <div ref={bottomRef} />
-
         </div>
 
         <div className="ai-input">
-
           <input
             type="text"
             maxLength={500}
@@ -194,7 +230,6 @@ function AIChatCard() {
           />
 
           <div className="ai-footer">
-
             <span>
               {message.length} / 500
             </span>
@@ -214,7 +249,6 @@ function AIChatCard() {
                 ? "Thinking..."
                 : "Send"}
             </button>
-
           </div>
 
           <p className="ai-disclaimer">
@@ -223,9 +257,7 @@ function AIChatCard() {
             contact emergency services
             immediately.
           </p>
-
         </div>
-
       </div>
     </Card>
   );

@@ -18,12 +18,28 @@ import "../../styles/notification.css";
 function NotificationCard() {
   const [notifications, setNotifications] = useState([]);
 
+  const getTimeAgo = (date) => {
+    const seconds = Math.floor(
+      (Date.now() - new Date(date).getTime()) / 1000
+    );
+
+    if (seconds < 60) return "Just now";
+
+    const minutes = Math.floor(seconds / 60);
+
+    if (minutes < 60) return `${minutes} min ago`;
+
+    const hours = Math.floor(minutes / 60);
+
+    return `${hours} hr ago`;
+  };
+
   useEffect(() => {
     const handleNotification = (notification) => {
       setNotifications((prev) => [
         {
           ...notification,
-          time: "Just now",
+          time: getTimeAgo(notification.createdAt),
         },
         ...prev,
       ].slice(0, 10));
@@ -82,7 +98,6 @@ function NotificationCard() {
       subtitle="Live Activity"
     >
       <div className="notification-list">
-
         {notifications.length === 0 && (
           <div className="notification-empty">
             No notifications yet.
@@ -90,7 +105,6 @@ function NotificationCard() {
         )}
 
         {notifications.map((item) => {
-
           const {
             Icon,
             color,

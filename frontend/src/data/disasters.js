@@ -5,7 +5,7 @@ const disasters = [
     title: "Flooded Road",
     description:
       "Heavy flooding reported. Avoid this area.",
-    latitude: 22.45605,
+    latitude: 22.35605,
     longitude: 87.3394,
     radius: 300,
     severity: "High",

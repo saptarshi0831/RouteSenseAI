@@ -19,7 +19,7 @@ const getNearbyHospitals = async (req, res) => {
     notificationService.sendNotification({
       userId: req.user.id,
       title: "Hospitals Updated",
-      message: "Nearby hospitals loaded.",
+      message: `${hospitals.length} hospitals found near your location.`,
       type: "hospital",
     });
   } catch (error) {

@@ -2,9 +2,20 @@ const shareService = require("../services/share.service");
 
 const createShareSession = async (req, res) => {
   try {
+    const io = req.app.get("io");
+
     const result = await shareService.createShareSession({
       creatorId: req.user.id,
       durationHours: req.body.durationHours,
+    });
+
+    // Notify current user
+    io.to(`user:${req.user.id}`).emit("notification:new", {
+      id: result.id,
+      type: "share",
+      title: "📡 Live Sharing",
+      message: "Your live location link has been created.",
+      createdAt: result.createdAt,
     });
 
     res.status(201).json({

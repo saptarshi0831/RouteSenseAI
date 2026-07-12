@@ -3,9 +3,16 @@ const notificationService = require("../services/notification.service");
 
 const chat = async (req, res) => {
   try {
-    const { message } = req.body;
+    const {
+      message,
+      context = {},
+    } = req.body;
 
-    const reply = await aiService.askAI(message);
+    const reply =
+        await aiService.askAI(
+          message,
+          context
+        );
 
     res.json({
       success: true,
@@ -15,8 +22,8 @@ const chat = async (req, res) => {
     // Send Socket.IO notification
     notificationService.sendNotification({
       userId: req.user.id,
-      title: "AI Assistant",
-      message: "AI generated a response.",
+      title: "RouteSense AI",
+      message: "AI assistant responded to your request.",
       type: "ai",
     });
   } catch (error) {

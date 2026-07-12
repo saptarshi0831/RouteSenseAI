@@ -343,7 +343,12 @@ function Dashboard() {
           ref={aiRef}
           className="col-span-12 lg:col-span-8"
         >
-          <AIChatCard />
+          <AIChatCard
+            routeSafety={routeSafety}
+            destination={destination}
+            hospitals={hospitals}
+            warning={warning}
+          />
         </div>
 
         {/* NOTIFICATIONS */}
