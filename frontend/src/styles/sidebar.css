@@ -121,3 +121,57 @@
 .logout-button:hover {
   background: #eef5ff;
 }
+
+/* ADMIN SIDEBAR */
+
+.admin-theme .sidebar {
+  background: #111827;
+  border-right: 1px solid #1F2937;
+}
+
+.admin-theme .sidebar-brand h2 {
+  color: #F9FAFB;
+}
+
+.admin-theme .sidebar-brand span {
+  color: #9CA3AF;
+}
+
+.admin-theme .sidebar-title {
+  color: #6B7280;
+}
+
+.admin-theme .sidebar-item {
+  color: #D1D5DB;
+}
+
+.admin-theme .sidebar-item:hover {
+  background: #1F2937;
+  color: #FFFFFF;
+}
+
+.admin-theme .sidebar-item.active {
+  background: linear-gradient(90deg, #EF4444, #DC2626);
+  color: white;
+}
+
+.admin-theme .sidebar-profile {
+  border-top: 1px solid #1F2937;
+}
+
+.admin-theme .sidebar-profile h4 {
+  color: white;
+}
+
+.admin-theme .sidebar-profile p {
+  color: #9CA3AF;
+}
+
+.admin-theme .logout-button {
+  background: #1F2937;
+  color: white;
+}
+
+.admin-theme .logout-button:hover {
+  background: #EF4444;
+}
