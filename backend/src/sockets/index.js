@@ -13,12 +13,13 @@ const registerSocketHandlers = (io) => {
   io.on("connection", (socket) => {
 
     const userRoom = `user:${socket.user.id}`;
-
     socket.join(userRoom);
+    console.log(`✅ ${socket.user.email} joined ${userRoom}`);
 
-    console.log(
-      `✅ ${socket.user.email} joined ${userRoom}`
-    );
+    if (socket.user.email === "admin@routesense.ai") {
+        socket.join("admins");
+        console.log(`✅ ${socket.user.email} joined admins room`);
+    }
 
     registerLocationEvents(io, socket);
     registerShareEvents(io, socket);
