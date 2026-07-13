@@ -727,7 +727,7 @@ The login page provides secure authentication for registered users using JWT aut
 📷 Screenshot
 
 <p align="center">
-<img src="images/login-page.png" width="100%">
+<img src="images/login.png" width="50%">
 </p>
 
 ---
@@ -747,7 +747,7 @@ Features include:
 📷 Screenshot
 
 <p align="center">
-<img src="images/register-page.png" width="100%">
+<img src="images/register.png" width="100%">
 </p>`
 
 ---
