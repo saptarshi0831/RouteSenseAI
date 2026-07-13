@@ -36,3 +36,41 @@
   color: #334155;
   font-size: 20px;
 }
+
+/* ADMIN HEADER */
+
+.admin-theme .dashboard-header {
+  background: #1E293B;
+  border: 1px solid #334155 !important;
+  border-left: 5px solid #EF4444 !important;
+
+  border-radius: 18px;
+
+  padding: 24px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.admin-theme .dashboard-header h1 {
+  color: white;
+}
+
+.admin-theme .dashboard-header h1 span {
+  color: #60A5FA;
+}
+
+.admin-theme .dashboard-header p {
+  color: #94A3B8;
+}
+
+.admin-theme .dashboard-date span {
+  color: #94A3B8;
+}
+
+.admin-theme .dashboard-date h3 {
+  color: white;
+}

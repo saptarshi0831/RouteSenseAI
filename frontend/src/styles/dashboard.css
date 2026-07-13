@@ -32,3 +32,17 @@
 .dashboard-content::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* ADMIN DASHBOARD THEME */
+
+.dashboard-layout.admin-theme {
+  background: #0F172A;
+}
+
+.dashboard-layout.admin-theme .dashboard-content {
+  background: #0F172A;
+}
+
+.dashboard-layout.admin-theme .dashboard-content::-webkit-scrollbar-thumb {
+  background: #334155;
+}

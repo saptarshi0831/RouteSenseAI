@@ -26,9 +26,9 @@ function AdminHeader() {
         <h1>
           {greeting}, <span>Admin {user?.name}</span> 👋
         </h1>
-
+        
         <p>
-          Emergency Control Center - Monitoring SOS and live events.
+          Real-time monitoring of SOS requests and emergency response.
         </p>
       </div>
 

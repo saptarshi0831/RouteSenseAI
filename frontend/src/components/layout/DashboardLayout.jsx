@@ -3,9 +3,14 @@ import Sidebar from "./Sidebar";
 
 import "../../styles/dashboard.css";
 
-function DashboardLayout({ children }) {
+function DashboardLayout({
+  children,
+  className = "",
+}) {
   return (
-    <div className="dashboard-layout">
+    <div
+      className={`dashboard-layout ${className}`}
+    >
       <Navbar />
       <div className="dashboard-body">
         <Sidebar />
