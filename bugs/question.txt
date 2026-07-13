@@ -1,7 +1,0 @@
-"Can it automatically reroute?"
-
-"The current prototype detects hazardous routes in real time and warns the user when no safe route can be guaranteed. Automatic rerouting is planned using commercial navigation providers like Google Maps Routes API or Mapbox Directions API, which support richer routing features than the open-source routing engine used in this prototype."
-
-"Is this just Gemini?"
-
-"No. We provide the AI with real-time application context such as the current route status, selected destination, nearby hospitals, and detected hazards. Its responses are generated based on the user's live situation within RouteSense AI."
