@@ -136,7 +136,7 @@ The main objectives of RouteSense AI are:
 - Automatic GPS detection
 - Interactive map
 - Current position marker
-
+<!-- 
 📷 **Screenshot**
 
 <p align="center">
@@ -230,7 +230,7 @@ Features:
 - Secure sharing
 - Live location updates
 - Clipboard copy
-
+ -->
 
 # 🛠 Technology Stack
 
@@ -535,7 +535,7 @@ http://localhost:5173
 
 ```
 Email:
-test@email.com
+test@gmail.com
 
 Password:
 Password@123
@@ -547,7 +547,7 @@ Password@123
 
 ```
 Email:
-admin@email.com
+admin@gmail.com
 
 Password:
 Password@123
