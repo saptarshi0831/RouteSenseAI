@@ -29,9 +29,7 @@ Real-time GPS • AI Emergency Assistant • Disaster Detection • Nearby Hospi
 > 📺 **Complete Project Demo (YouTube)**
 
 **Watch Here:**  
-👉 **https://youtube.com/YOUR_VIDEO_LINK**
-
-> *(Replace with your uploaded YouTube video after recording.)*
+👉 **https://youtube.com/VIDEO_LINK**
 
 ---
 
@@ -335,7 +333,7 @@ RouteSense-AI
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RouteSense-AI.git
+git clone https://github.com/USERNAME/RouteSense-AI.git
 ```
 
 ```bash
@@ -377,11 +375,11 @@ Create a `.env` file inside the **backend** folder.
 ```env
 PORT=5000
 
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+MONGO_URI=MONGODB_CONNECTION_STRING
 
-JWT_SECRET=YOUR_SECRET_KEY
+JWT_SECRET=SECRET_KEY
 
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+GEMINI_API_KEY=GEMINI_API_KEY
 
 CLIENT_URL=http://localhost:5173
 ```
@@ -522,8 +520,6 @@ Password:
 Password@123
 ```
 
-*(Replace with your own credentials or remove this section before publishing.)*
-
 ---
 
 # 🔐 Authentication
@@ -634,7 +630,7 @@ dotenv
 
 ---
 
-# 🚀 Deployment (Optional)
+# 🚀 Deployment
 
 Frontend
 
@@ -714,8 +710,6 @@ Verify
 - Firefox ✅
 
 # 📸 Application Preview
-
-> **Note:** Replace the placeholders below with screenshots of your application.
 
 ---
 
@@ -1471,14 +1465,6 @@ If you'd like to improve RouteSense AI:
 3. Commit your changes.
 4. Push the branch.
 5. Open a Pull Request.
-
----
-
-# 📝 License
-
-This project is developed for **educational and academic purposes**.
-
-Feel free to use and modify the code with appropriate attribution.
 
 ---
 
