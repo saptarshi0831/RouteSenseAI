@@ -136,12 +136,6 @@ The main objectives of RouteSense AI are:
 - Automatic GPS detection
 - Interactive map
 - Current position marker
-<!-- 
-📷 **Screenshot**
-
-<p align="center">
-<img src="images/gps-connected.png" width="100%">
-</p>
 
 ---
 
@@ -151,12 +145,6 @@ The main objectives of RouteSense AI are:
 - Distance calculation
 - Hospital information
 - Navigate directly from dashboard
-
-📷 **Screenshot**
-
-<p align="center">
-<img src="images/nearby-hospital.png" width="100%">
-</p>
 
 ---
 
@@ -187,18 +175,6 @@ If an affected route is detected,
 
 the user receives an immediate warning recommending another destination or alternative route.
 
-📷 **Screenshot**
-
-```
-(Add Safe Route Screenshot)
-```
-
-📷 **Screenshot**
-
-```
-(Add Affected Route Screenshot)
-```
-
 ---
 
 ### 🚨 Emergency SOS
@@ -212,12 +188,6 @@ Features:
 - Real-time notification
 - Admin receives SOS immediately
 
-📷 **Screenshot**
-
-```
-(Add SOS Screenshot)
-```
-
 ---
 
 ### 📡 Live Location Sharing
@@ -230,7 +200,6 @@ Features:
 - Secure sharing
 - Live location updates
 - Clipboard copy
- -->
 
 # 🛠 Technology Stack
 
