@@ -12,6 +12,7 @@ const sosRoutes = require("./routes/sos.routes");
 const aiRoutes = require("./routes/ai.routes");
 const hospitalRoutes = require("./routes/hospital.routes");
 const geocodeRoutes = require("./routes/geocode.routes");
+const adminRoutes = require("./routes/admin.routes");
 
 // Middleware
 const authMiddleware = require("./middleware/auth.middleware"); // Temporary protected route
@@ -53,6 +54,9 @@ app.use("/api/hospitals",hospitalRoutes);
 
 // Destination search
 app.use("/api/geocode", geocodeRoutes);
+
+// Admin routes
+app.use("/api/admin", adminRoutes);
 
 // Temporary protected route for testing authentication
 app.get(

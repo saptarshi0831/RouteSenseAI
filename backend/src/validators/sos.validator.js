@@ -1,11 +1,9 @@
-const Joi = require("joi");
+const { z } = require("zod");
 
-const createEmergencySchema = Joi.object({
-  latitude: Joi.number().required(),
-
-  longitude: Joi.number().required(),
-
-  message: Joi.string().allow("").optional(),
+const createEmergencySchema = z.object({
+  latitude: z.number({ required_error: "Latitude is required" }),
+  longitude: z.number({ required_error: "Longitude is required" }),
+  message: z.string().optional(),
 });
 
 module.exports = {

@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import ShareSession from "../pages/ShareSession";
+import AdminDashboard from "../pages/AdminDashboard";
 
 import Settings from "../pages/Settings";
 import Notifications from "../pages/Notifications";
@@ -76,6 +77,15 @@ function AppRoutes() {
           element={
             <ProtectedRoute>
               <EmergencyHistory />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
             </ProtectedRoute>
           }
         />

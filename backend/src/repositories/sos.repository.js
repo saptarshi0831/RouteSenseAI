@@ -18,7 +18,9 @@ const getEmergencyById = async (id) => {
 const getActiveEmergencies = async () => {
   return prisma.emergency.findMany({
     where: {
-      status: "ACTIVE",
+      status: {
+        in: ["ACTIVE", "RESPONDING"]
+      }
     },
     include: {
       user: true,

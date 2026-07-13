@@ -24,6 +24,7 @@ const signup = async ({
             name,
             email,
             password: hashedPassword,
+            role: email === 'admin@routesense.ai' ? 'admin' : 'user'
         });
 
     // Generate JWT token
