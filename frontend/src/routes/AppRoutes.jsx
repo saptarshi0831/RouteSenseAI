@@ -16,6 +16,7 @@ import Notifications from "../pages/Notifications";
 import EmergencyHistory from "../pages/History";
 
 import ProtectedRoute from "./ProtectedRoute";
+import AdminRoute from "./AdminRoute";
 
 function AppRoutes() {
   return (
@@ -84,9 +85,9 @@ function AppRoutes() {
         <Route
           path="/admin"
           element={
-            <ProtectedRoute>
+            <AdminRoute>
               <AdminDashboard />
-            </ProtectedRoute>
+            </AdminRoute>
           }
         />
 

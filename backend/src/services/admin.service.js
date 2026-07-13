@@ -11,7 +11,9 @@ const getDashboardStats = async () => {
     });
 
     const pendingSOS = await prisma.emergency.count({
-        where: { status: "ACTIVE" }
+        where: { 
+            status: { in: ["ACTIVE", "RESPONDING"] }
+        }
     });
 
     const resolvedSOS = await prisma.emergency.count({
