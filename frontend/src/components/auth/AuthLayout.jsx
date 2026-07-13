@@ -17,11 +17,10 @@ function AuthLayout({ children }) {
           <div className="brand">
 
             <div className="brand-icon">
-              🤓
+              📍
             </div>
 
-            <h1> 📍 RouteSense AI</h1>
-
+            <h1>&nbsp;RouteSense AI</h1>
             <p>
               Navigate smarter.
               <br />
