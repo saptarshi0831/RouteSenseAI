@@ -747,7 +747,7 @@ Features include:
 📷 Screenshot
 
 <p align="center">
-<img src="images/register.png" width="100%">
+<img src="images/register.png" width="50%">
 </p>`
 
 ---
@@ -768,7 +768,7 @@ It provides:
 📷 Screenshot
 
 <p align="center">
-<img src="images/dashboard.png" width="100%">
+<img src="images/dashboard-page.png" width="50%">
 </p>
 
 ---
@@ -788,7 +788,7 @@ It displays:
 📷 Screenshot
 
 <p align="center">
-<img src="images/live-map.png" width="100%">
+<img src="images/live-map.png" width="50%">
 </p>
 
 ---
@@ -807,7 +807,7 @@ Information includes:
 📷 Screenshot
 
 <p align="center">
-<img src="images/hospital-panel.png" width="100%">
+<img src="images/hospital-panel.png" width="50%">
 </p>
 
 ---
@@ -827,7 +827,7 @@ Displays:
 📷 Screenshot
 
 <p align="center">
-<img src="images/safe-route.png" width="100%">
+<img src="images/safe-route.png" width="50%">
 </p>
 
 ---
@@ -843,7 +843,7 @@ If a route intersects a disaster zone:
 📷 Screenshot
 
 <p align="center">
-<img src="images/affected-route.png" width="100%">
+<img src="images/affected-route.png" width="50%">
 </p>
 
 ---
@@ -859,7 +859,7 @@ If a route intersects a disaster zone:
 📷 Screenshot
 
 <p align="center">
-<img src="images/alternate-route.png" width="100%">
+<img src="images/alternate-route.png" width="50%">
 </p>
 
 ---
@@ -888,7 +888,7 @@ making responses more relevant to the user's current situation.
 📷 Screenshot
 
 <p align="center">
-<img src="images/ai-chat.png" width="100%">
+<img src="images/ai-chat.png" width="50%">
 </p>
 
 ---
@@ -924,11 +924,11 @@ User Receives Notification
 📷 Screenshot
 
 <p align="center">
-<img src="images/sos-modal.png" width="100%">
+<img src="images/sos-modal.png" width="50%">
 </p>
 
 <p align="center">
-<img src="images/sos-success.png" width="100%">
+<img src="images/sos-success.png" width="50%">
 </p>
 
 ---
@@ -947,7 +947,7 @@ Features:
 📷 Screenshot
 
 <p align="center">
-<img src="images/location-share.png" width="100%">
+<img src="images/location-share.png" width="50%">
 </p>
 
 ---
@@ -967,7 +967,7 @@ Notification Types:
 📷 Screenshot
 
 <p align="center">
-<img src="images/notifications.png" width="100%">
+<img src="images/notifications.png" width="50%">
 </p>
 
 ---
@@ -988,7 +988,7 @@ Features:
 📷 Screenshot
 
 <p align="center">
-<img src="images/admin-dashboard.png" width="100%">
+<img src="images/admin-dashboard.png" width="50%">
 </p>
 
 ---
