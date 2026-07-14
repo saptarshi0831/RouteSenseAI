@@ -19,6 +19,8 @@ backend/node_modules/
 !.env.example
 *.pem
 
+
+.venv/
 # 3. Build Outputs (Frontend & Backend)
 dist/
 dist-ssr/
