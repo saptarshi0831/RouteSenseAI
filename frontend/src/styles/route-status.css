@@ -3,11 +3,11 @@
   padding: 14px 18px;
   border-radius: 14px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
 }
 
-.route-status div {
+.route-status > div {
   display: flex;
   flex-direction: column;
 }
@@ -16,9 +16,10 @@
   font-size: 15px;
 }
 
-.route-status span {
+.route-status p {
   font-size: 13px;
   color: #64748b;
+  margin: 2px 0;
 }
 
 .route-status.safe {
@@ -26,8 +27,9 @@
   border: 1px solid #86efac;
 }
 
-.route-status.safe svg {
+.route-status.safe > svg {
   color: #16a34a;
+  margin-top: 2px;
 }
 
 .route-status.danger {
@@ -35,6 +37,69 @@
   border: 1px solid #fca5a5;
 }
 
-.route-status.danger svg {
+.route-status.danger > svg {
   color: #dc2626;
+  margin-top: 2px;
+}
+
+/* ── Route Source Badge ── */
+
+.route-source-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.route-source-badge span {
+  font-size: 11px;
+}
+
+.route-source-badge.ors {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+
+.route-source-badge.ors svg {
+  color: #1d4ed8;
+}
+
+.route-source-badge.fallback {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.route-source-badge.fallback svg {
+  color: #92400e;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Route Warning Box ── */
+
+.route-warning {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(220, 38, 38, 0.06);
+  border: 1px solid rgba(220, 38, 38, 0.15);
+}
+
+.route-warning p {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.route-warning strong {
+  font-size: 13px;
 }

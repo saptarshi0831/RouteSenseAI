@@ -76,6 +76,7 @@ function Dashboard() {
       coordinates: [],
       distance: 0,
       duration: 0,
+      source: null,
     });
 
   const routeSafety =

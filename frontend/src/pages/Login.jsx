@@ -40,7 +40,12 @@ function Login() {
 
       login(response.data);
 
-      navigate("/dashboard");
+      const loggedInUser = response.data.user;
+      if (loggedInUser && (loggedInUser.role === "admin" || loggedInUser.email === "admin@routesense.ai")) {
+        navigate("/admin");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err) {
       setError(
         err.response?.data?.message || "Invalid email or password."

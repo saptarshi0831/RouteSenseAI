@@ -1,6 +1,7 @@
 import {
   ShieldCheck,
   TriangleAlert,
+  RefreshCw,
 } from "lucide-react";
 
 import "../../styles/route-status.css";
@@ -16,6 +17,9 @@ function RouteStatus({
 
   const eta =
     Math.ceil(routeInfo.duration / 60);
+
+  const isORS = routeInfo.source === "ors";
+  const isOSRM = routeInfo.source === "osrm";
 
   if (safety.safe) {
     return (
@@ -39,6 +43,20 @@ function RouteStatus({
               {eta} min
             </strong>
           </p>
+
+          {isOSRM && (
+            <div className="route-source-badge fallback">
+              <RefreshCw size={12} />
+              <span>OSRM Fallback — disaster avoidance temporarily unavailable</span>
+            </div>
+          )}
+
+          {isORS && (
+            <div className="route-source-badge ors">
+              <ShieldCheck size={12} />
+              <span>ORS — actively avoiding disaster zones</span>
+            </div>
+          )}
 
         </div>
       </div>
@@ -75,16 +93,30 @@ function RouteStatus({
         </p>
 
         <div className="route-warning">
-        <p>
-          <strong>
-            No Safe Route Available
-          </strong>
-        </p>
-
-        <p>
-          Please choose another destination.
-        </p>
-      </div>
+          {isOSRM ? (
+            <>
+              <p>
+                <strong>
+                  ⚠️ Disaster Avoidance Unavailable
+                </strong>
+              </p>
+              <p>
+                ORS is currently down. This standard route passes through a danger zone. Choose another destination or use Google Maps for navigation.
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                <strong>
+                  No Safe Route Available
+                </strong>
+              </p>
+              <p>
+                Please choose another destination.
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
