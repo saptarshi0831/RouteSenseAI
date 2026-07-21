@@ -29,7 +29,7 @@ Real-time GPS • AI Emergency Assistant • Disaster Detection • Nearby Hospi
 > 📺 **Complete Project Demo (YouTube)**
 
 **Watch Here:**  
-👉 **https://youtube.com/VIDEO_LINK**
+👉 **https://drive.google.com/file/d/1qjvtutY6yuB7I-8gNxduOKoZHxHogIbu/view?usp=drive_link**
 
 ---
 
@@ -92,7 +92,7 @@ This can lead users into dangerous locations.
 Additionally,
 
 - Emergency communication is slow.
-- People may not know the nearest hospital.
+- People may not know the nearest safe hospital.
 - Family members cannot easily track users.
 - Authorities receive delayed emergency information.
 
@@ -328,41 +328,32 @@ RouteSense-AI
 
 ---
 
-# ⚙️ Installation Guide
+# ⚙️ Installation
 
-## 1. Clone Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/USERNAME/RouteSense-AI.git
-```
-
-```bash
 cd RouteSense-AI
 ```
 
 ---
 
-## 2. Install Frontend Dependencies
+## 2. Install Dependencies
 
-```bash
-cd frontend
-```
-
-```bash
-npm install
-```
-
----
-
-## 3. Install Backend Dependencies
-
-Open another terminal.
+### Backend
 
 ```bash
 cd backend
+npm install
 ```
 
+### Frontend
+
+Open a new terminal.
+
 ```bash
+cd frontend
 npm install
 ```
 
@@ -370,87 +361,51 @@ npm install
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the **backend** folder.
+Create a file named **`.env`** inside the `backend` directory.
 
 ```env
 PORT=5000
 
-MONGO_URI=MONGODB_CONNECTION_STRING
+DATABASE_URL=YOUR_MONGODB_CONNECTION_STRING
 
-JWT_SECRET=SECRET_KEY
+FRONTEND_URL=http://localhost:5173
 
-GEMINI_API_KEY=GEMINI_API_KEY
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-CLIENT_URL=http://localhost:5173
+GEOAPIFY_API_KEY=YOUR_GEOAPIFY_API_KEY
 ```
 
----
-
-# 🌐 Required APIs
-
-## Google Gemini AI
-
-Used for:
-
-- Emergency Guidance
-- First Aid Assistance
-- AI Chat Assistant
-
-Get API Key:
-
-https://aistudio.google.com/app/apikey
+Replace the placeholder values with your own credentials before running the project.
 
 ---
 
-## MongoDB Atlas
+# 🌐 Required Services & APIs
 
-Create a free MongoDB cluster.
+| Service | Purpose | API Key Required |
+|----------|---------|------------------|
+| MongoDB Atlas | Database | ✅ Yes |
+| Google Gemini AI | AI Emergency Assistant | ✅ Yes |
+| Geoapify | Nearby Hospitals & Geocoding | ✅ Yes |
+| OpenStreetMap | Interactive Maps | ❌ No |
+| Leaflet Routing Machine + OSRM | Route Generation & ETA | ❌ No |
 
-Get connection string from
+### Get API Keys
+
+**MongoDB Atlas**
 
 https://www.mongodb.com/atlas
 
-Example
+**Google Gemini AI**
 
-```env
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/routesense
-```
+https://aistudio.google.com/app/apikey
 
----
+**Geoapify**
 
-## OpenStreetMap
-
-Used for:
-
-- Interactive Maps
-
-No API key required.
+https://www.geoapify.com/
 
 ---
 
-## Nominatim API
-
-Used for:
-
-- Destination Search
-
-No API key required.
-
----
-
-## OSRM Routing API
-
-Used for:
-
-- Route Generation
-- Distance Calculation
-- ETA
-
-No API key required.
-
----
-
-# ▶ Running the Application
+# ▶️ Running the Application
 
 ## Backend
 
@@ -458,19 +413,27 @@ No API key required.
 cd backend
 ```
 
+Generate the Prisma Client:
+
 ```bash
-npm start
+npx prisma generate
 ```
 
-or
+Start the server:
 
 ```bash
 npm run dev
 ```
 
-Expected output
+or
 
+```bash
+npm start
 ```
+
+You should see:
+
+```text
 MongoDB Connected
 Server running on port 5000
 Socket.IO Initialized
@@ -480,21 +443,24 @@ Socket.IO Initialized
 
 ## Frontend
 
-```bash
-cd frontend
-```
+Open a new terminal.
 
 ```bash
+cd frontend
 npm run dev
 ```
 
-Open
+---
 
-```
+## Open the Application
+
+Visit:
+
+```text
 http://localhost:5173
 ```
 
----
+The application is now ready to use.
 
 # 👤 Test Accounts
 
@@ -514,10 +480,10 @@ Password@123
 
 ```
 Email:
-admin@gmail.com
+admin@routesense.com
 
 Password:
-Password@123
+Admin@123
 ```
 
 ---
@@ -630,7 +596,7 @@ dotenv
 
 ---
 
-# 🚀 Deployment
+<!-- # 🚀 Deployment
 
 Frontend
 
@@ -646,7 +612,7 @@ Database
 
 - MongoDB Atlas
 
----
+--- -->
 
 # ❗ Troubleshooting
 
@@ -844,22 +810,6 @@ If a route intersects a disaster zone:
 
 <p align="center">
 <img src="images/affected-route.png" width="50%">
-</p>
-
----
-
-### Alternate Route
-
-If a route intersects a disaster zone:
-
-- Warning displayed
-- Disaster name shown
-- Recommendation to choose alternative route
-
-📷 Screenshot
-
-<p align="center">
-<img src="images/alternate-route.png" width="50%">
 </p>
 
 ---

@@ -3,6 +3,7 @@
   border: 1px solid #E8EEF6;
   border-radius: 24px;
   padding: 24px;
+  margin-top: 20px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   transition: 0.25s;
 }
@@ -39,4 +40,56 @@
 
 .card-content {
   width: 100%;
+}
+/* ADMIN CARDS */
+
+.admin-theme .app-card {
+  background: #1E293B;
+  border: 1px solid #334155;
+  box-shadow: none;
+}
+
+.admin-theme .card-title {
+  color: #F8FAFC;
+}
+
+.admin-theme .card-subtitle {
+  color: #94A3B8;
+}
+
+.admin-theme .card-content {
+  color: #E2E8F0;
+}
+
+.admin-theme .admin-map-legend{
+    display:flex;
+    gap:18px;
+    margin-bottom:14px;
+}
+
+.admin-theme .legend-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#CBD5E1;
+    font-size:14px;
+    font-weight:500;
+}
+
+.admin-theme .legend-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+
+.admin-theme .legend-dot.active{
+    background:#EF4444;
+}
+
+.admin-theme .legend-dot.responding{
+    background:#F59E0B;
+}
+
+.admin-theme .legend-dot.resolved{
+    background:#22C55E;
 }

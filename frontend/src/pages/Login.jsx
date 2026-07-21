@@ -40,10 +40,11 @@ function Login() {
 
       login(response.data);
 
-      const loggedInUser = response.data.user;
-      if (loggedInUser && (loggedInUser.role === "admin" || loggedInUser.email === "admin@routesense.ai")) {
+      const loggedUser = response.data.user;
+      if (loggedUser.role === "admin" || loggedUser.email === "admin@routesense.ai") {
         navigate("/admin");
-      } else {
+      }
+      else {
         navigate("/dashboard");
       }
     } catch (err) {

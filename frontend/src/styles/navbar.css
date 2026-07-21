@@ -5,13 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 22px;
 }
 
 .navbar-search {
-  width: 420px;
+  width: 360px;
   height: 48px;
-  background: #f7f9fc;
+  background: #eef5ff;
   border: 1px solid #e8eef6;
   border-radius: 16px;
   display: flex;
@@ -61,7 +61,7 @@
   height: 48px;
   border: none;
   border-radius: 16px;
-  background: #f7f9fc;
+  background: #eef5ff;
   cursor: pointer;
   position: relative;
 }
@@ -159,4 +159,86 @@
 
 .logout-menu {
   color: #ef4444 !important;
+}
+
+/*admin navbar */
+.admin-theme .navbar{
+    background:#111827;
+    border-bottom:1px solid #1F2937;
+}
+
+/* Search */
+
+.admin-theme .navbar-search{
+    background:#1E293B;
+    border:1px solid #334155;
+}
+
+.admin-theme .navbar-search input{
+    background:transparent;
+    color:#F8FAFC;
+}
+
+.admin-theme .navbar-search input::placeholder{
+    color:#94A3B8;
+}
+
+.admin-theme .search-icon{
+    color:#94A3B8;
+}
+
+/* Live Badge */
+
+.admin-theme .live-status{
+    background:#163323;
+    color:#4ADE80;
+}
+
+/* Notification */
+
+.admin-theme .notification-button{
+    background:#1E293B;
+    color:#F8FAFC;
+}
+
+.admin-theme .notification-button:hover{
+    background:#334155;
+}
+
+/* Profile */
+
+.admin-theme .profile-info h4{
+    color:#F8FAFC;
+}
+
+.admin-theme .profile-info span{
+    color:#94A3B8;
+}
+
+.admin-theme .profile-button{
+    color:white;
+}
+
+/* Dropdown */
+
+.admin-theme .profile-dropdown{
+    background:#1E293B;
+    border:1px solid #334155;
+}
+
+.admin-theme .profile-dropdown button{
+    color:#E2E8F0;
+}
+
+.admin-theme .profile-dropdown button:hover{
+    background:#334155;
+}
+
+.admin-theme .profile-dropdown hr{
+    border-top:1px solid #334155;
+}
+.admin-theme .navbar-search input{
+    border:none !important;
+    outline:none;
+    box-shadow:none;
 }
